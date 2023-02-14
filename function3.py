@@ -42,3 +42,13 @@ def userURLBullder(server,port,**user):
 #호출
 print(userURLBullder('credu.com','80',id="kim", passwd="1234"))
 print(userURLBullder('credu.com','80',id="kim", passwd="1234",name="mike"))
+
+#람다함수(함수를 정의하는 간단한 문법)
+
+g = lambda x,y:x*y
+print(g(3,4))
+print(g(5,6))
+print((lambda x:x*x)(3))
+print(globals())
+
+
