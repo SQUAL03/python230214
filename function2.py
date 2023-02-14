@@ -40,3 +40,29 @@ def intersect(prelist,postlist):
 
 #호출
 print(intersect('HAM','SPAM'))
+
+
+#전역변수(불변)의 일기+쓰기
+g = 1
+def testScope(a):
+    #global g
+    g = 2
+    return a+g
+
+#호출   
+print(testScope(1))
+print("전역변수 g:",g)
+
+#가변형식
+wordlist = ["J","A","M"]
+def change(x):
+    #x[0] = "H"
+    #복사본 생성
+    x1 = x[:]
+    x1[0] = 'H'
+    print("함수 내부:",x1)
+
+#호출   
+change(wordlist)
+print(wordlist)
+
