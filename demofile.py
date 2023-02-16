@@ -29,4 +29,11 @@ f.close()
 f = open("c:\\work\\demo.txt","rt",encoding="utf-8")
 result = f.read()
 print(result)
+#어디를 읽고 있어?
+print (f.tell())
+#다시 처음으로 돌아가(리셋)
+f.seek(0)
+lst = f.readlines()
+for item in lst:
+    print(item, end="")
 f.close()
