@@ -5,13 +5,9 @@ result = re.search("[0-9]*th","  35th")
 print(result)
 print(result.group())
 #정확하게 일치하는 경우(첫번째만 검색)
-try:
-    result = re.match("[0-9]*th","35th")
-except AttributeError:
-    print("검색된 결과가 없습니다.")
-else:    
-    print(result)
-    print(result.group())
+result = re.match("[0-9]*th","35th")
+print(result)
+print(result.group())
 
 result = re.search("ap","this is apple")
 print(result.group())
